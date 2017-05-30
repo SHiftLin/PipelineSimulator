@@ -1,0 +1,84 @@
+Fetch:
+
+Decode:
+irmovl  $1024, %esp
+Execute:
+null
+Memory:
+bubble
+Write Back:
+null
+
+
+Fetch:
+
+Decode:
+irmovl  $36, %eax
+Execute:
+irmovl  $1024, %esp
+Memory:
+bubble
+Write Back:
+bubble
+
+
+Fetch:
+
+Decode:
+pushl  %eax
+Execute:
+irmovl  $36, %eax
+Memory:
+irmovl  $1024, %esp
+Write Back:
+bubble
+
+
+Fetch:
+
+Decode:
+irmovl  $1024, %esp
+Execute:
+null
+Memory:
+bubble
+Write Back:
+null
+
+
+Fetch:
+
+Decode:
+irmovl  $36, %eax
+Execute:
+irmovl  $1024, %esp
+Memory:
+bubble
+Write Back:
+bubble
+
+
+Fetch:
+
+Decode:
+pushl  %eax
+Execute:
+irmovl  $36, %eax
+Memory:
+irmovl  $1024, %esp
+Write Back:
+bubble
+
+
+Fetch:
+
+Decode:
+xorl  %eax, %eax
+Execute:
+pushl  %eax
+Memory:
+irmovl  $36, %eax
+Write Back:
+irmovl  $1024, %esp
+
+
