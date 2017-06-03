@@ -16,6 +16,7 @@ import javax.swing.JFileChooser;
 import pipelineclient.*;
 import pipelineclient.utility.*;
 import static pipelineclient.Var.*;
+import static pipelineclient.utility.Convert.*;
 
 public class ClientFrame extends javax.swing.JFrame {
 
@@ -247,7 +248,7 @@ public class ClientFrame extends javax.swing.JFrame {
             .addGroup(jPanel_FIleLayout.createSequentialGroup()
                 .addGap(536, 536, 536)
                 .addComponent(jButton_OpenFile, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(537, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
         jPanel_FIleLayout.setVerticalGroup(
             jPanel_FIleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,7 +266,7 @@ public class ClientFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Binary Code", "Instruction"
+                "Address", "Binary Code", "Instruction"
             }
         ));
         jScrollPane1.setViewportView(jTable_Code);
@@ -289,7 +290,7 @@ public class ClientFrame extends javax.swing.JFrame {
 
         jTabbedPane_Navigation.addTab("Code", jPanel_Code);
 
-        jButton_Play.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jButton_Play.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jButton_Play.setText("Play");
         jButton_Play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,7 +298,7 @@ public class ClientFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton_NextStep.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jButton_NextStep.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jButton_NextStep.setText("Next");
         jButton_NextStep.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,7 +306,7 @@ public class ClientFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton_Reset.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jButton_Reset.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jButton_Reset.setText("Reset");
         jButton_Reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -313,7 +314,7 @@ public class ClientFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton_Refresh.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jButton_Refresh.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jButton_Refresh.setText("Refresh");
         jButton_Refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,7 +322,7 @@ public class ClientFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel_Cycle.setFont(new java.awt.Font("微软雅黑", 0, 18)); // NOI18N
+        jLabel_Cycle.setFont(new java.awt.Font("微软雅黑", 1, 18)); // NOI18N
         jLabel_Cycle.setText("Cycle");
 
         jTextField_Cycle.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
@@ -330,7 +331,7 @@ public class ClientFrame extends javax.swing.JFrame {
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jButton_Stop.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jButton_Stop.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jButton_Stop.setText("Stop");
         jButton_Stop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,15 +340,15 @@ public class ClientFrame extends javax.swing.JFrame {
         });
 
         Option.add(jRadioButton_1HZ);
-        jRadioButton_1HZ.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jRadioButton_1HZ.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jRadioButton_1HZ.setText("1HZ");
 
         Option.add(jRadioButton_5HZ);
-        jRadioButton_5HZ.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jRadioButton_5HZ.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jRadioButton_5HZ.setText("5HZ");
 
         Option.add(jRadioButton_20HZ);
-        jRadioButton_20HZ.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jRadioButton_20HZ.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jRadioButton_20HZ.setText("20HZ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -393,7 +394,11 @@ public class ClientFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator9)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
+                        .addContainerGap()
+                        .addComponent(jLabel_Cycle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField_Cycle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73)
                         .addComponent(jButton_Play)
                         .addGap(18, 18, 18)
                         .addComponent(jButton_Stop)
@@ -403,29 +408,25 @@ public class ClientFrame extends javax.swing.JFrame {
                         .addComponent(jButton_Reset)
                         .addGap(18, 18, 18)
                         .addComponent(jButton_Refresh)
-                        .addGap(87, 87, 87)
+                        .addGap(54, 54, 54)
                         .addComponent(jRadioButton_1HZ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jRadioButton_5HZ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jRadioButton_20HZ)
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel_Cycle, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField_Cycle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(149, 149, 149))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton_NextStep, jButton_Play, jButton_Refresh, jButton_Reset, jButton_Stop});
 
-        jLabel_Fetch.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jLabel_Fetch.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jLabel_Fetch.setText("Fetch");
 
-        jLabel_Decode.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jLabel_Decode.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jLabel_Decode.setText("Decode");
 
-        jLabel_Excute.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jLabel_Excute.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jLabel_Excute.setText("Excute");
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -589,10 +590,10 @@ public class ClientFrame extends javax.swing.JFrame {
 
         jTextField_W_DstM.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
-        jLabel_Memory.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jLabel_Memory.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jLabel_Memory.setText("Memory");
 
-        jLabel_Writeback.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        jLabel_Writeback.setFont(new java.awt.Font("微软雅黑", 1, 12)); // NOI18N
         jLabel_Writeback.setText("Writeback");
 
         jLabel_M_Cnd.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
@@ -605,13 +606,12 @@ public class ClientFrame extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_Fetch, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Decode, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Excute, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Memory, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Writeback, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel_Writeback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                    .addComponent(jLabel_Memory, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_Excute, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_Decode, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_Fetch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1073,7 +1073,7 @@ public class ClientFrame extends javax.swing.JFrame {
                             .addComponent(jLabel_Instruction, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel_ProcessLayout.setVerticalGroup(
             jPanel_ProcessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1088,7 +1088,7 @@ public class ClientFrame extends javax.swing.JFrame {
                         .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel_ProcessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel_ProcessLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(0, 27, Short.MAX_VALUE)
                                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel_ProcessLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
@@ -1202,7 +1202,7 @@ public class ClientFrame extends javax.swing.JFrame {
             .addGroup(jPanel_AboutLayout.createSequentialGroup()
                 .addGap(369, 369, 369)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(441, Short.MAX_VALUE))
+                .addContainerGap(450, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_AboutLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1399,16 +1399,19 @@ public class ClientFrame extends javax.swing.JFrame {
 
     private void jTabbedPane_NavigationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane_NavigationMouseClicked
         // TODO add your handling code here:
-        /*
+        
         PipelineClient.Send(Request.getReqStr(Request.MEMORY, ""));
-        memory = PipelineClient.ReceiveBytes();
-        Object[][] memoryDisplay = null;
-        int addr = 0, i = 0;
+        memory =PipelineClient.ReceiveBytes();
+        int rows=(memory.length/4)+1;
+        Object[][] memoryDisplay = new Object[rows][2];
+        int add = 0, i = 0;
         String temp;
-        while ((temp = Convert.ByteArray2String(addr, 4)).equals("") == false) {
+        while (i<rows) {
+            temp = Convert.ByteArray2String(add, 4);
             memoryDisplay[i][1] = temp;
-            memoryDisplay[i][0] = Convert.Int2Hex(addr);
-            addr += 4;
+            memoryDisplay[i][0] = Hex2String((String)Integer.toHexString(add));
+            add += 4;
+            i++;
         }
         jTable_Memory.setModel(new javax.swing.table.DefaultTableModel(
                 memoryDisplay,
@@ -1416,7 +1419,7 @@ public class ClientFrame extends javax.swing.JFrame {
                     "Address", "Data"
                 }
         ));
-         */
+
     }//GEN-LAST:event_jTabbedPane_NavigationMouseClicked
 
     private void jButton_OpenFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_OpenFileActionPerformed
@@ -1441,21 +1444,22 @@ public class ClientFrame extends javax.swing.JFrame {
             String Code = PipelineClient.Receive();
             Code = Code.substring(1, Code.length() - 1);
             String[] rows = Code.split("#");
-            Object[][] codeDisplay = new Object[rows.length][2];
-            int i = 0, j = 0;
+            Object[][] codeDisplay = new Object[rows.length][3];
+            int i = 0, j = 1;
+            int add=0;
             for (String x : rows) {
                 String temp = x.substring(1, x.length() - 1);
-                for (String y : temp.split(":")) {
-                    codeDisplay[i][j] = y;
-                    j++;
-                }
+                String[] y=temp.split(":");
+                codeDisplay[i][1]=y[0];
+                codeDisplay[i][2]=y[1];
+                codeDisplay[i][0]=Hex2String((String)Integer.toHexString(add));
+                add+=y[0].length()/2;
                 i++;
-                j = 0;
             }
             jTable_Code.setModel(new javax.swing.table.DefaultTableModel(
                     codeDisplay,
                     new String[]{
-                        "Binary Code", "Instruction"
+                        "Address","Binary Code", "Instruction"
                     }
             ));
         }

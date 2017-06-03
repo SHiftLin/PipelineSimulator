@@ -82,7 +82,7 @@ public class Convert {
         return res;
     }
     
-    public static String Int2Hex(int x){
+    public static String Hex2String(String x){
         String str_m=String.valueOf(x);
         String str="00000000";
         str_m=str.substring(0,8-str_m.length())+str_m;
