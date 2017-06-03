@@ -22,7 +22,7 @@ public class PipelineClient {
     static DataOutputStream out;
     static DataInputStream in;
     static ClientFrame CF;
-            
+
     /**
      * @param args the command line arguments
      */
@@ -34,41 +34,48 @@ public class PipelineClient {
             in = new DataInputStream(client.getInputStream());
         } catch (Exception e) {
         }
-        CF=new ClientFrame();
+        CF = new ClientFrame();
         CF.setLocationRelativeTo(null);
         CF.setResizable(false);
         CF.setVisible(true);
     }
-        
+
     public static void Send(String request) {
         try {
             out.writeUTF(request);
         } catch (Exception e) {
         }
     }
-    
-    public static void SendBytes(byte[] argv,int len) {
+
+    public static void SendBytes(byte[] argv, int len) {
         try {
-            out.write(argv,0,len);
-        }catch (Exception e) {
+            out.write(argv, 0, len);
+        } catch (Exception e) {
         }
     }
-    
+
     public static String Receive() {
-        String result="";
+        String result = "";
         try {
-            result=in.readUTF();
+            result = in.readUTF();
         } catch (Exception e) {
         }
         return result;
     }
-    
-    public static byte[] ReceiveBytes(){
-        byte[] result=new byte[Var.MEMORY_SIZE];
-        try{
-            in.read(result,0,Var.MEMORY_SIZE);
-        }catch(Exception e){
+
+    public static byte[] ReceiveBytes() {
+        byte[] result = new byte[Var.MEMORY_SIZE];
+        try {
+            in.read(result, 0, Var.MEMORY_SIZE);
+        } catch (Exception e) {
         }
         return result;
+    }
+
+    public static void clearInputStream() {
+        try {
+            in.skip(in.available());
+        } catch (Exception e) {
+        }
     }
 }

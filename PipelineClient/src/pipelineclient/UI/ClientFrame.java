@@ -1196,9 +1196,8 @@ public class ClientFrame extends javax.swing.JFrame {
             ));
         }
     }
-    
-    private void setButtonVisable(boolean vis)
-    {
+
+    private void setButtonVisable(boolean vis) {
         jButton_Play.setVisible(vis);
         jButton_NextStep.setVisible(vis);
         jButton_Reset.setVisible(vis);
@@ -1236,6 +1235,7 @@ public class ClientFrame extends javax.swing.JFrame {
         }
         PipelineClient.Send(Request.getReqStr(Request.STOP, jTextField_Cycle.getText()));
         setButtonVisable(true);
+        PipelineClient.clearInputStream();//****Thread?
     }//GEN-LAST:event_jButton_StopActionPerformed
 
     private void jButton_ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ResetActionPerformed
