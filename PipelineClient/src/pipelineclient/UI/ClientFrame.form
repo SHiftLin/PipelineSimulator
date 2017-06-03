@@ -68,7 +68,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
                       <Component id="jButton_OpenFile" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace pref="361" max="32767" attributes="0"/>
+                      <EmptySpace pref="369" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -223,7 +223,7 @@
                               <Component id="jSeparator8" min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
                                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -268,37 +268,40 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jRadioButton_1HZ" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField_Cycle" max="32767" attributes="0"/>
-                                  <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabel_Cycle" max="32767" attributes="0"/>
-                                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jButton_Refresh" linkSize="2" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                                              <Component id="jButton_Reset" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jButton_NextStep" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                              <Component id="jButton_Stop" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                              <Component id="jButton_Play" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jButton_Refresh" linkSize="2" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                                      <Component id="jButton_Reset" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jButton_NextStep" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                                      <Component id="jButton_Stop" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                                      <Component id="jButton_Play" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="24" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jTextField_Cycle" max="32767" attributes="0"/>
+                                                      <Component id="jLabel_Cycle" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                           <Component id="jSeparator9" min="-2" pref="5" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jRadioButton_20HZ" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jRadioButton_5HZ" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator6" min="-2" max="-2" attributes="0"/>
@@ -310,7 +313,7 @@
                       <Component id="jSeparator6" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSeparator9" max="32767" attributes="0"/>
+                              <Component id="jSeparator9" pref="568" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                   <Component id="jButton_Play" linkSize="1" min="-2" max="-2" attributes="0"/>
@@ -328,13 +331,14 @@
                                   <Component id="jRadioButton_5HZ" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jRadioButton_20HZ" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="jLabel_Cycle" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField_Cycle" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel_Cycle" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jTextField_Cycle" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -387,13 +391,16 @@
                 <Component class="javax.swing.JLabel" name="jLabel_Cycle">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="18" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Cycle"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_Cycle">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="    0"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
@@ -625,11 +632,11 @@
                                   <Component id="jLabel_Fetch" min="-2" pref="50" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                   <Component id="jLabel_Decode" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                   <Component id="jLabel_Excute" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                   <Component id="jLabel_Memory" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                                   <Component id="jLabel_Writeback" min="-2" pref="50" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -738,7 +745,7 @@
                               <Component id="jLabel_W_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField_W_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="76" max="32767" attributes="0"/>
+                          <EmptySpace pref="143" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -783,6 +790,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_F_PredPC">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="F_PredPC"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -791,11 +801,17 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_F_PredPC">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_D_Stat">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="D_Stat"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -804,6 +820,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_D_Icode">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="D_Icode"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -812,6 +831,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_Stat">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_Stat"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -820,6 +842,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_Icode">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_Icode"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -828,6 +853,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_Stat">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_Stat"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -836,6 +864,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_Icode">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_Icode"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
@@ -845,6 +876,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_W_Stat">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="W_Stat"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -852,21 +886,59 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_D_Stat">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_D_Icode">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_Stat">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_Icode">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_Stat">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_Icode">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_W_Stat">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_Ifun">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_Ifun"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
@@ -876,6 +948,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_DstM">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_DstM"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -883,11 +958,24 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_Ifun">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_DstM">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_ValC">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_ValC"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -896,6 +984,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_SrcA">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_SrcA"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -903,11 +994,24 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_ValC">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_SrcA">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_ValA">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_ValA"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -916,6 +1020,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_SrcB">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_SrcB"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -923,11 +1030,24 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_ValA">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_SrcB">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_ValB">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_ValB"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -935,9 +1055,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_ValB">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_E_DstE">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="E_DstE"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -945,9 +1073,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_E_DstE">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_D_Ifun">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="D_Ifun"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -956,6 +1092,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_D_ValP">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="D_ValP"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
@@ -964,11 +1103,24 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_D_Ifun">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_D_ValP">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_D_RA">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="D_RA"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -977,6 +1129,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_D_ValC">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="D_ValC"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -984,11 +1139,24 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_D_RA">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_D_ValC">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_D_RB">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="D_RB"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -996,9 +1164,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_D_RB">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_ValA">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_ValA"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1006,9 +1182,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_ValA">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_CC">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_CC"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1016,9 +1200,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_CC">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_DstM">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_DstM"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1026,9 +1218,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_DstM">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_ValE">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_ValE"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1036,9 +1236,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_ValE">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_DstE">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_DstE"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1046,9 +1254,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_DstE">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_W_Icode">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="W_Icode"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1056,9 +1272,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_W_Icode">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_W_ValE">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="W_ValE"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1066,9 +1290,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_W_ValE">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_W_ValM">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="W_ValM"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1076,9 +1308,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_W_ValM">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_W_DstE">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="W_DstE"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1086,9 +1326,17 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_W_DstE">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_W_DstM">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="W_DstM"/>
                   </Properties>
                   <AccessibilityProperties>
@@ -1096,6 +1344,11 @@
                   </AccessibilityProperties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_W_DstM">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_Memory">
                   <Properties>
@@ -1115,10 +1368,18 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel_M_Cnd">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="M_Cnd"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_M_Cnd">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
