@@ -76,7 +76,7 @@ public class ClientFrame extends javax.swing.JFrame {
         jTextField_E_Instr.setEditable(false);
         jTextField_M_Instr.setEditable(false);
         jTextField_W_Instr.setEditable(false);
-        
+
     }
 
     /**
@@ -254,7 +254,7 @@ public class ClientFrame extends javax.swing.JFrame {
             .addGroup(jPanel_FIleLayout.createSequentialGroup()
                 .addGap(288, 288, 288)
                 .addComponent(jButton_OpenFile, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(369, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
 
         jTabbedPane_Navigation.addTab("File", jPanel_FIle);
@@ -283,7 +283,7 @@ public class ClientFrame extends javax.swing.JFrame {
             jPanel_CodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_CodeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -391,7 +391,7 @@ public class ClientFrame extends javax.swing.JFrame {
             .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator9, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE)
+                    .addComponent(jSeparator9)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jButton_Play)
@@ -860,7 +860,7 @@ public class ClientFrame extends javax.swing.JFrame {
                     .addComponent(jTextField_W_DstE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_W_DstM)
                     .addComponent(jTextField_W_DstM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel_F_PredPC.getAccessibleContext().setAccessibleName("");
@@ -1088,7 +1088,7 @@ public class ClientFrame extends javax.swing.JFrame {
                         .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel_ProcessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel_ProcessLayout.createSequentialGroup()
-                                .addGap(0, 60, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel_ProcessLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
@@ -1146,7 +1146,7 @@ public class ClientFrame extends javax.swing.JFrame {
             jPanel_MemoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_MemoryLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1237,6 +1237,9 @@ public class ClientFrame extends javax.swing.JFrame {
     public void Display() {
         String str = PipelineClient.Receive();
         System.out.println(str);
+        if (str.length() <= 0) {
+            return;
+        }
         Map<String, String> Json = JsonUtil.jsonStringToMap(str);
         if (Json.get("status").equals("HALT")) {
             if (task != null) {
@@ -1363,7 +1366,7 @@ public class ClientFrame extends javax.swing.JFrame {
         }
         PipelineClient.Send(Request.getReqStr(Request.PLAY, Integer.toString(F)));
         task = new ClientStep();
-        timer.schedule(task, 0, F);
+        timer.schedule(task, 0, 1000 / F);
     }//GEN-LAST:event_jButton_PlayActionPerformed
 
     private void jButton_NextStepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_NextStepActionPerformed

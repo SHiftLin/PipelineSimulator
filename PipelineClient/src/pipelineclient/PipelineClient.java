@@ -9,6 +9,7 @@ import pipelineclient.UI.ClientFrame;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,9 +31,12 @@ public class PipelineClient {
         // TODO code application logic here
         try {
             client = new Socket(serverAddress, port);
+            client.setSoTimeout(500);
             out = new DataOutputStream(client.getOutputStream());
             in = new DataInputStream(client.getInputStream());
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Cannot connect to the server!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
         CF = new ClientFrame();
         CF.setLocationRelativeTo(null);
