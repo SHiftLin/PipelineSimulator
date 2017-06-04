@@ -1460,6 +1460,7 @@ public class ClientFrame extends javax.swing.JFrame {
             PipelineClient.Send(Request.getReqStr(Request.OPENFILE, Integer.toString(count)));
             PipelineClient.SendBytes(re, count);
             getCode();
+            jButton_ResetActionPerformed(null);
         }
     }//GEN-LAST:event_jButton_OpenFileActionPerformed
 

@@ -37,19 +37,17 @@ public class Pipeline {
         task = null;
     }
 
-    private void Reset(boolean transmit) throws Exception {
+    private void Reset() throws Exception {
         Var.reset();
         Runnable = true;
         for (int i = 0; i < codeLen; i++) {
             memory[i] = code[i];
         }
-        if (transmit) {
-            Refresh();
-        }
+        Refresh();
     }
 
     private void OpenFile(byte argv[]) throws Exception {
-        Reset(false);
+        Var.reset();
         codeLen = min(argv.length, MEMORY_SIZE);
         code = new byte[codeLen];
         for (int i = 0; i < codeLen; i++) {
@@ -126,7 +124,7 @@ public class Pipeline {
         Request req = new Request(request);
         switch (req.cmd) {
             case Request.RESET:
-                Reset(true);
+                Reset();
                 break;
             case Request.OPENFILE:
                 OpenFile(PipelineServer.ReceiveBytes(req.argv));

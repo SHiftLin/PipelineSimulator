@@ -8,7 +8,6 @@ package pipelineserver;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import static pipelineserver.stage.Var.MAX_CODELEN;
 
 /**
  *
