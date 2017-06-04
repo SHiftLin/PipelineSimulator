@@ -5,7 +5,9 @@
  */
 package pipelineserver;
 
+import java.io.DataOutputStream;
 import static java.lang.Math.*;
+import java.net.Socket;
 import java.util.Timer;
 import pipelineserver.stage.*;
 import pipelineserver.utility.*;
@@ -21,6 +23,7 @@ public class Pipeline {
     boolean Runnable;
     Timer timer;
     StepTask task;
+    Socket socket;
 
     public Pipeline() {
         /*
@@ -43,31 +46,31 @@ public class Pipeline {
         for (int i = 0; i < codeLen; i++) {
             memory[i] = code[i];
         }
-        Refresh();
     }
 
     private void OpenFile(byte argv[]) throws Exception {
-        Var.reset();
         codeLen = min(argv.length, MEMORY_SIZE);
         code = new byte[codeLen];
         for (int i = 0; i < codeLen; i++) {
-            memory[i] = argv[i];
             code[i] = argv[i];
         }
+        Reset();
     }
 
     private void Play(int frequency) throws Exception {
+        socket = PipelineServer.Accept();
+        DataOutputStream out = new DataOutputStream(socket.getOutputStream());
         int interval = 1000 / frequency;
-        task = new StepTask();
+        task = new StepTask(out);
         timer.schedule(task, 0, interval);
     }
 
-    void Next(boolean transmit) throws Exception {
+    void Next(DataOutputStream out, boolean transmit) throws Exception {
         if (!Runnable) {
             if (task != null) {
                 task.cancel();
             }
-            PipelineServer.WriteInfo(JsonUtil.HALT());
+            PipelineServer.WriteInfo(out, JsonUtil.HALT());
             return;
         }
         Cycle++;
@@ -89,7 +92,7 @@ public class Pipeline {
         Control.stall_bubble();
         Control.updateRegisters();
         if (transmit) {
-            Refresh();
+            Refresh(out);
         }
         if (W_stat != Stats.SAOK) {
             Runnable = false;
@@ -100,20 +103,24 @@ public class Pipeline {
         if (task != null) {
             task.cancel();
         }
+        try {
+            socket.close();
+        } catch (Exception e) {
+        }
         if (cycle < Cycle) {
-            OpenFile(code);
+            Reset();
             for (int i = 0; i < cycle; i++) {
-                Next(false);
+                Next(null, false);
             }
         }
     }
 
-    private void Refresh() throws Exception {
-        PipelineServer.WriteInfo(JsonUtil.Process());
+    private void Refresh(DataOutputStream out) throws Exception {
+        PipelineServer.WriteInfo(out, JsonUtil.Process());
     }
 
     private void Code() throws Exception {
-        PipelineServer.WriteInfo(getString.showCode());
+        PipelineServer.WriteInfo(null, getString.showCode());
     }
 
     private void Memory() throws Exception {
@@ -133,13 +140,13 @@ public class Pipeline {
                 Play(req.argv);
                 break;
             case Request.NEXT:
-                Next(true);
+                Next(null, true);
                 break;
             case Request.STOP:
                 Stop(req.argv);
                 break;
             case Request.REFRESH:
-                Refresh();
+                Refresh(null);
                 break;
             case Request.CODE:
                 Code();

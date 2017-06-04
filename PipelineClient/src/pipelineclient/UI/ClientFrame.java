@@ -12,6 +12,7 @@ package pipelineclient.UI;
 import java.awt.Font;
 import java.awt.Rectangle;
 import java.io.*;
+import java.net.Socket;
 import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.JFileChooser;
@@ -26,8 +27,8 @@ import static pipelineclient.utility.Convert.*;
 public class ClientFrame extends javax.swing.JFrame {
 
     Timer timer;
-    ClientStep task;
-    int MAX_CODELEN = 65536;
+    StepTask task;
+    Socket socket;
 
     private void setEdit(boolean edit) {
         jTextField_F_PredPC.setEditable(edit);
@@ -1280,8 +1281,8 @@ public class ClientFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void Display() {
-        String str = PipelineClient.Receive();
+    public void Display(DataInputStream in) {
+        String str = PipelineClient.Receive(in);
         System.out.println(str);
         if (str.length() <= 0) {
             return;
@@ -1347,12 +1348,11 @@ public class ClientFrame extends javax.swing.JFrame {
         jTextField_W_Instr.setText(Json.get("W_code"));
 
         jTextField_Cycle.setText(Json.get("Cycle"));
-
     }
 
     private void getCode() {
         PipelineClient.Send(Request.getReqStr(Request.CODE, ""));
-        String Code = PipelineClient.Receive();
+        String Code = PipelineClient.Receive(null);
         Code = Code.substring(1, Code.length() - 1);
         String[] rows = Code.split("#");
         Object[][] codes = new Object[rows.length][3];
@@ -1389,23 +1389,28 @@ public class ClientFrame extends javax.swing.JFrame {
 
     private void jButton_PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PlayActionPerformed
         // TODO add your handling code here:
-        setButtonVisable(false);
-        int F = 1;
-        if (jRadioButton_5HZ.isSelected()) {
-            F = 5;
+        try {
+            socket = PipelineClient.getSocket();
+            DataInputStream in = new DataInputStream(socket.getInputStream());
+            setButtonVisable(false);
+            int F = 1;
+            if (jRadioButton_5HZ.isSelected()) {
+                F = 5;
+            }
+            if (jRadioButton_20HZ.isSelected()) {
+                F = 20;
+            }
+            PipelineClient.Send(Request.getReqStr(Request.PLAY, Integer.toString(F)));
+            task = new StepTask(in);
+            timer.schedule(task, 0, 1000 / F);
+        } catch (Exception e) {
         }
-        if (jRadioButton_20HZ.isSelected()) {
-            F = 20;
-        }
-        PipelineClient.Send(Request.getReqStr(Request.PLAY, Integer.toString(F)));
-        task = new ClientStep();
-        timer.schedule(task, 0, 1000 / F);
     }//GEN-LAST:event_jButton_PlayActionPerformed
 
     private void jButton_NextStepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_NextStepActionPerformed
         // TODO add your handling code here:
         PipelineClient.Send(Request.getReqStr(Request.NEXT, ""));
-        Display();
+        Display(null);
     }//GEN-LAST:event_jButton_NextStepActionPerformed
 
     private void jButton_StopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_StopActionPerformed
@@ -1415,19 +1420,28 @@ public class ClientFrame extends javax.swing.JFrame {
         }
         PipelineClient.Send(Request.getReqStr(Request.STOP, jTextField_Cycle.getText()));
         setButtonVisable(true);
-        PipelineClient.clearInputStream();//****Thread?
+        try {
+            socket.close();
+        } catch (Exception e) {
+        }
+        //sleep?
+        Refresh();
     }//GEN-LAST:event_jButton_StopActionPerformed
 
     private void jButton_ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ResetActionPerformed
         // TODO add your handling code here:
         PipelineClient.Send(Request.getReqStr(Request.RESET, ""));
-        Display();
+        jButton_RefreshActionPerformed(null);
     }//GEN-LAST:event_jButton_ResetActionPerformed
+
+    private void Refresh() {
+        PipelineClient.Send(Request.getReqStr(Request.REFRESH, ""));
+        Display(null);
+    }
 
     private void jButton_RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RefreshActionPerformed
         // TODO add your handling code here:
-        PipelineClient.Send(Request.getReqStr(Request.REFRESH, ""));
-        Display();
+        Refresh();
         getCode();
         getMemory();
     }//GEN-LAST:event_jButton_RefreshActionPerformed
@@ -1458,7 +1472,6 @@ public class ClientFrame extends javax.swing.JFrame {
             }
             PipelineClient.Send(Request.getReqStr(Request.OPENFILE, Integer.toString(count)));
             PipelineClient.SendBytes(re, count);
-            getCode();
             jButton_ResetActionPerformed(null);
         }
     }//GEN-LAST:event_jButton_OpenFileActionPerformed

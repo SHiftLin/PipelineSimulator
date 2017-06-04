@@ -5,6 +5,7 @@
  */
 package pipelineserver;
 
+import java.io.DataOutputStream;
 import java.util.TimerTask;
 
 /**
@@ -12,13 +13,19 @@ import java.util.TimerTask;
  * @author lsh
  */
 public class StepTask extends TimerTask {
-    
+
+    DataOutputStream out = null;
+
+    StepTask(DataOutputStream _out) {
+        out = _out;
+    }
+
     @Override
     public void run() {
         try {
-            PipelineServer.pipeline.Next(true);
+            PipelineServer.pipeline.Next(out, true);
         } catch (Exception e) {
         }
     }
-    
+
 }

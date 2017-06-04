@@ -8,6 +8,7 @@ package pipelineclient;
 import pipelineclient.UI.ClientFrame;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.*;
 import javax.swing.JOptionPane;
 
@@ -19,7 +20,7 @@ public class PipelineClient {
 
     private static String serverAddress = "127.0.0.1";
     private static int port = 10000;
-    static Socket client;
+    private static Socket client;
     static DataOutputStream out;
     static DataInputStream in;
     static ClientFrame CF;
@@ -30,8 +31,8 @@ public class PipelineClient {
     public static void main(String[] args) {
         // TODO code application logic here
         try {
-            client = new Socket(serverAddress, port);
-            client.setSoTimeout(300);
+            client = getSocket();
+            client.setSoTimeout(0);
             out = new DataOutputStream(client.getOutputStream());
             in = new DataInputStream(client.getInputStream());
         } catch (Exception e) {
@@ -42,6 +43,10 @@ public class PipelineClient {
         CF.setLocationRelativeTo(null);
         CF.setResizable(false);
         CF.setVisible(true);
+    }
+
+    public static Socket getSocket() throws Exception {
+        return new Socket(serverAddress, port);
     }
 
     public static void Send(String request) {
@@ -58,10 +63,13 @@ public class PipelineClient {
         }
     }
 
-    public static String Receive() {
+    public static String Receive(DataInputStream inStream) {
+        if (inStream == null) {
+            inStream = in;
+        }
         String result = "";
         try {
-            result = in.readUTF();
+            result = inStream.readUTF();
         } catch (Exception e) {
         }
         return result;

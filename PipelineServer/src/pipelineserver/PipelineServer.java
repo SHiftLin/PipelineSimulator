@@ -34,7 +34,7 @@ public class PipelineServer {
         }
         while (true) {
             try {
-                server = serverSocket.accept();
+                server = Accept();
                 System.out.println("New connection!");
 
                 serveStart();
@@ -64,6 +64,10 @@ public class PipelineServer {
         }
     }
 
+    public static Socket Accept() throws Exception {
+        return serverSocket.accept();
+    }
+
     static byte[] ReceiveBytes(int len) throws Exception {
         byte[] result = new byte[len];
         try {
@@ -78,18 +82,18 @@ public class PipelineServer {
         return result;
     }
 
-    static void WriteInfo(String result) throws Exception {
-        out.writeUTF(result);
-        System.out.println(result);
+    static void WriteInfo(DataOutputStream outStream, String result) {
+        if (outStream == null) {
+            outStream = out;
+        }
+        try {
+            outStream.writeUTF(result);
+            System.out.println(result);
+        } catch (Exception e) {
+        }
     }
 
     static void WriteInfo(byte[] result) throws Exception {
         out.write(result, 0, result.length);
     }
-    /*
-    static String readLine() throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        return br.readLine();
-    }
-     */
 }
