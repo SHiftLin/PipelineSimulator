@@ -94,11 +94,7 @@ public class Pipeline {
             Refresh();
         }
         if (W_stat != Stats.SAOK) {
-            if (task != null) {
-                task.cancel();
-            }
             Runnable = false;
-            PipelineServer.WriteInfo(JsonUtil.HALT());
         }
     }
 
