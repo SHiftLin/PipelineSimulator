@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  */
 public class PipelineClient {
 
-    private static String serverAddress = "127.0.0.1";
+    private static String serverAddress;
     private static int port = 10000;
     private static Socket client;
     static DataOutputStream out;
@@ -30,6 +30,10 @@ public class PipelineClient {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        serverAddress = JOptionPane.showInputDialog(null, "Server Address:", "Input", JOptionPane.QUESTION_MESSAGE);
+        if (serverAddress.length() <= 0) {
+            serverAddress = "127.0.0.1";
+        }
         try {
             client = getSocket();
             client.setSoTimeout(0);

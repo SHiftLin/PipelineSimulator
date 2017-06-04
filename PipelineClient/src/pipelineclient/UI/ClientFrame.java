@@ -103,9 +103,9 @@ public class ClientFrame extends javax.swing.JFrame {
 
         DefaultTableCellRenderer hr = (DefaultTableCellRenderer) jTable_Code.getTableHeader().getDefaultRenderer();
         hr.setHorizontalAlignment(JLabel.CENTER);
-        jTable_Code.getTableHeader().setFont(new Font("Lucida Grande", Font.BOLD, 14));
+        jTable_Code.getTableHeader().setFont(new Font("Lucida Grande", Font.BOLD, 16));
         jTable_Code.getTableHeader().setDefaultRenderer(hr);
-        jTable_Memory.getTableHeader().setFont(new Font("Lucida Grande", Font.BOLD, 14));
+        jTable_Memory.getTableHeader().setFont(new Font("Lucida Grande", Font.BOLD, 16));
         jTable_Memory.getTableHeader().setDefaultRenderer(hr);
     }
 
@@ -249,10 +249,8 @@ public class ClientFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable_Memory = new javax.swing.JTable();
         jPanel_About = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel_Pipeline = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel_Pipeline = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -275,21 +273,21 @@ public class ClientFrame extends javax.swing.JFrame {
         jPanel_FIleLayout.setHorizontalGroup(
             jPanel_FIleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_FIleLayout.createSequentialGroup()
-                .addGap(536, 536, 536)
+                .addGap(532, 532, 532)
                 .addComponent(jButton_OpenFile, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(545, Short.MAX_VALUE))
+                .addContainerGap(560, Short.MAX_VALUE))
         );
         jPanel_FIleLayout.setVerticalGroup(
             jPanel_FIleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_FIleLayout.createSequentialGroup()
-                .addGap(288, 288, 288)
+                .addGap(208, 208, 208)
                 .addComponent(jButton_OpenFile, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(309, Short.MAX_VALUE))
+                .addContainerGap(397, Short.MAX_VALUE))
         );
 
         jTabbedPane_Navigation.addTab("File", jPanel_FIle);
 
-        jTable_Code.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jTable_Code.setFont(new java.awt.Font("Courier", 0, 18)); // NOI18N
         jTable_Code.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -306,6 +304,7 @@ public class ClientFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable_Code.setRowHeight(20);
         jScrollPane1.setViewportView(jTable_Code);
         if (jTable_Code.getColumnModel().getColumnCount() > 0) {
             jTable_Code.getColumnModel().getColumn(0).setResizable(false);
@@ -319,14 +318,14 @@ public class ClientFrame extends javax.swing.JFrame {
             jPanel_CodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_CodeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1261, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel_CodeLayout.setVerticalGroup(
             jPanel_CodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_CodeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -654,7 +653,7 @@ public class ClientFrame extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
+                    .addComponent(jSeparator2)
                     .addComponent(jSeparator3)
                     .addComponent(jSeparator4)
                     .addComponent(jSeparator5)
@@ -971,10 +970,10 @@ public class ClientFrame extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel_Register, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_Register, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel_eax, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel_ecx, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -993,8 +992,9 @@ public class ClientFrame extends javax.swing.JFrame {
                             .addComponent(jTextField_esp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField_ebp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField_esi, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField_edi, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(6, 6, 6))
+                            .addComponent(jTextField_edi, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1108,7 +1108,7 @@ public class ClientFrame extends javax.swing.JFrame {
                             .addComponent(jLabel_Instruction, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
         jPanel_ProcessLayout.setVerticalGroup(
             jPanel_ProcessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1157,7 +1157,7 @@ public class ClientFrame extends javax.swing.JFrame {
 
         jTabbedPane_Navigation.addTab("Process", jPanel_Process);
 
-        jTable_Memory.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jTable_Memory.setFont(new java.awt.Font("Courier", 0, 18)); // NOI18N
         jTable_Memory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1174,6 +1174,7 @@ public class ClientFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable_Memory.setRowHeight(20);
         jScrollPane2.setViewportView(jTable_Memory);
         if (jTable_Memory.getColumnModel().getColumnCount() > 0) {
             jTable_Memory.getColumnModel().getColumn(0).setResizable(false);
@@ -1186,83 +1187,49 @@ public class ClientFrame extends javax.swing.JFrame {
             jPanel_MemoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_MemoryLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1261, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel_MemoryLayout.setVerticalGroup(
             jPanel_MemoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_MemoryLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jTabbedPane_Navigation.addTab("Memory", jPanel_Memory);
+
+        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("——Lin Shihan & Zhao Wuxu");
 
         jLabel_Pipeline.setFont(new java.awt.Font("微软雅黑", 1, 48)); // NOI18N
         jLabel_Pipeline.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel_Pipeline.setText("Pipeline Simulator");
         jLabel_Pipeline.setAlignmentX(0.5F);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_Pipeline, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_Pipeline, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("——Lin Shihan & Zhao Wuxu");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout jPanel_AboutLayout = new javax.swing.GroupLayout(jPanel_About);
         jPanel_About.setLayout(jPanel_AboutLayout);
         jPanel_AboutLayout.setHorizontalGroup(
             jPanel_AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_AboutLayout.createSequentialGroup()
-                .addGap(369, 369, 369)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(450, Short.MAX_VALUE))
+                .addGap(420, 420, 420)
+                .addComponent(jLabel_Pipeline)
+                .addContainerGap(421, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_AboutLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(220, 220, 220))
         );
         jPanel_AboutLayout.setVerticalGroup(
             jPanel_AboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_AboutLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(117, 117, 117)
+                .addComponent(jLabel_Pipeline)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addContainerGap(462, Short.MAX_VALUE))
         );
 
         jTabbedPane_Navigation.addTab("About", jPanel_About);
@@ -1271,11 +1238,13 @@ public class ClientFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane_Navigation)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane_Navigation, javax.swing.GroupLayout.PREFERRED_SIZE, 1294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane_Navigation)
+            .addComponent(jTabbedPane_Navigation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1546,8 +1515,6 @@ public class ClientFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel_About;
     private javax.swing.JPanel jPanel_Code;
     private javax.swing.JPanel jPanel_FIle;
