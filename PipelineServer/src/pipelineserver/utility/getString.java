@@ -28,7 +28,6 @@ public class getString {
             }
         }
         res += "]";
-        System.out.println(res);
         return res;
     }
 

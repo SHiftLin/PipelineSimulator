@@ -31,7 +31,7 @@ public class PipelineClient {
         // TODO code application logic here
         try {
             client = new Socket(serverAddress, port);
-            client.setSoTimeout(500);
+            client.setSoTimeout(0);
             out = new DataOutputStream(client.getOutputStream());
             in = new DataInputStream(client.getInputStream());
         } catch (Exception e) {
@@ -67,10 +67,15 @@ public class PipelineClient {
         return result;
     }
 
-    public static byte[] ReceiveBytes() {
-        byte[] result = new byte[Var.MEMORY_SIZE];
+    public static byte[] ReceiveBytes(int len) {
+        byte[] result = new byte[len];
         try {
-            in.read(result, 0, Var.MEMORY_SIZE);
+            int left = len, offset = 0;
+            while (left > 0) {
+                int x = in.read(result, offset, left);
+                left -= x;
+                offset += x;
+            }
         } catch (Exception e) {
         }
         return result;

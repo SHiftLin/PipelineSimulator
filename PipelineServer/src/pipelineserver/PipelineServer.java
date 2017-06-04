@@ -8,6 +8,7 @@ package pipelineserver;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import static pipelineserver.stage.Var.MAX_CODELEN;
 
 /**
  *
@@ -20,7 +21,6 @@ public class PipelineServer {
     private static Socket server;
     private static DataInputStream in;
     private static DataOutputStream out;
-    private static int MAX_CODELEN = 65536;
 
     /**
      * @param args the command line arguments
@@ -31,7 +31,7 @@ public class PipelineServer {
             serverSocket = new ServerSocket(10000);
         } catch (Exception e) {
             System.out.println("Port allocation failed!");
-            return;
+            System.exit(0);
         }
         while (true) {
             try {
@@ -60,19 +60,23 @@ public class PipelineServer {
             try {
                 pipeline.work(request);
             } catch (Exception e) {
-                System.out.println("Request process failed!"+e.getMessage());
+                System.out.println("Request process failed!" + e.getMessage());
             }
         }
     }
 
-    static byte[] ReadBytes() throws Exception {
-        byte[] buffer = new byte[MAX_CODELEN];
-        int count = in.read(buffer);
-        byte[] argv = new byte[count];
-        for (int i = 0; i < count; i++) {
-            argv[i] = buffer[i];
+    static byte[] ReceiveBytes(int len) throws Exception {
+        byte[] result = new byte[len];
+        try {
+            int left = len, offset = 0;
+            while (left > 0) {
+                int x = in.read(result, offset, left);
+                left -= x;
+                offset += x;
+            }
+        } catch (Exception e) {
         }
-        return argv;
+        return result;
     }
 
     static void WriteInfo(String result) throws Exception {

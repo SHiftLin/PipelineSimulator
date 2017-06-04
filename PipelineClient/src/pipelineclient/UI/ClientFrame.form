@@ -127,28 +127,28 @@
                 <Component class="javax.swing.JTable" name="jTable_Code">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="18" style="0"/>
+                      <Font name="Lucida Grande" size="14" style="0"/>
                     </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="3" rowCount="0">
-                        <Column editable="true" title="Address" type="java.lang.Object"/>
-                        <Column editable="true" title="Binary Code" type="java.lang.Object"/>
-                        <Column editable="true" title="Instruction" type="java.lang.Object"/>
+                        <Column editable="false" title="Address" type="java.lang.Object"/>
+                        <Column editable="false" title="Binary Code" type="java.lang.Object"/>
+                        <Column editable="false" title="Instruction" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                           <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                           <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                           <Title/>
                           <Editor/>
                           <Renderer/>
@@ -286,17 +286,17 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jButton_Refresh" linkSize="2" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                                                      <Component id="jButton_Reset" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jButton_NextStep" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                                      <Component id="jButton_Stop" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                                      <Component id="jButton_Play" linkSize="2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                                      <Component id="jButton_Refresh" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                                      <Component id="jButton_Reset" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                                      <Component id="jButton_NextStep" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                                      <Component id="jButton_Stop" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                                      <Component id="jButton_Play" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="24" max="32767" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jTextField_Cycle" max="32767" attributes="0"/>
+                                                      <Component id="jTextField_Cycle" min="-2" pref="86" max="-2" attributes="0"/>
                                                       <Component id="jLabel_Cycle" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -327,7 +327,7 @@
                                   <Component id="jTextField_Cycle" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                                   <Component id="jButton_Play" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   <Component id="jButton_Stop" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton_NextStep" linkSize="1" min="-2" max="-2" attributes="0"/>
@@ -407,7 +407,8 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="12" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="    0"/>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="0"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
@@ -1736,22 +1737,22 @@
                 <Component class="javax.swing.JTable" name="jTable_Memory">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="&#x5fae;&#x8f6f;&#x96c5;&#x9ed1;" size="18" style="0"/>
+                      <Font name="Lucida Grande" size="14" style="0"/>
                     </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="2" rowCount="0">
-                        <Column editable="true" title="Address" type="java.lang.Object"/>
-                        <Column editable="true" title="Data" type="java.lang.Object"/>
+                        <Column editable="false" title="Address" type="java.lang.Object"/>
+                        <Column editable="false" title="Data" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                           <Title/>
                           <Editor/>
                           <Renderer/>
                         </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                           <Title/>
                           <Editor/>
                           <Renderer/>

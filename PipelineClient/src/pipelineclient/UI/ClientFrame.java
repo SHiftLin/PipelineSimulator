@@ -9,10 +9,15 @@ package pipelineclient.UI;
  *
  * @author 11437
  */
+import java.awt.Font;
 import java.io.*;
 import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import pipelineclient.*;
 import pipelineclient.utility.*;
 import static pipelineclient.Var.*;
@@ -24,6 +29,65 @@ public class ClientFrame extends javax.swing.JFrame {
     ClientStep task;
     int MAX_CODELEN = 65536;
 
+    private void setEdit(boolean edit) {
+        jTextField_F_PredPC.setEditable(edit);
+        jTextField_D_Stat.setEditable(edit);
+        jTextField_D_Ifun.setEditable(edit);
+        jTextField_D_RA.setEditable(edit);
+        jTextField_D_RB.setEditable(edit);
+        jTextField_D_Icode.setEditable(edit);
+        jTextField_D_ValP.setEditable(edit);
+        jTextField_D_ValC.setEditable(edit);
+        jTextField_E_Stat.setEditable(edit);
+        jTextField_E_Ifun.setEditable(edit);
+        jTextField_E_ValC.setEditable(edit);
+        jTextField_E_ValA.setEditable(edit);
+        jTextField_E_ValB.setEditable(edit);
+        jTextField_E_Icode.setEditable(edit);
+        jTextField_E_DstM.setEditable(edit);
+        jTextField_E_SrcA.setEditable(edit);
+        jTextField_E_SrcB.setEditable(edit);
+        jTextField_E_DstE.setEditable(edit);
+        jTextField_M_Stat.setEditable(edit);
+        jTextField_M_ValA.setEditable(edit);
+        jTextField_M_ValE.setEditable(edit);
+        jTextField_M_CC.setEditable(edit);
+        jTextField_M_Icode.setEditable(edit);
+        jTextField_M_DstE.setEditable(edit);
+        jTextField_M_DstM.setEditable(edit);
+        jTextField_M_Cnd.setEditable(edit);
+        jTextField_W_Stat.setEditable(edit);
+        jTextField_W_Icode.setEditable(edit);
+        jTextField_W_ValE.setEditable(edit);
+        jTextField_W_ValM.setEditable(edit);
+        jTextField_W_DstE.setEditable(edit);
+        jTextField_W_DstM.setEditable(edit);
+        jTextField_Cycle.setEditable(edit);
+        jTextField_eax.setEditable(edit);
+        jTextField_ecx.setEditable(edit);
+        jTextField_edx.setEditable(edit);
+        jTextField_ebx.setEditable(edit);
+        jTextField_esp.setEditable(edit);
+        jTextField_ebp.setEditable(edit);
+        jTextField_esi.setEditable(edit);
+        jTextField_edi.setEditable(edit);
+        jTextField_D_Instr.setEditable(edit);
+        jTextField_E_Instr.setEditable(edit);
+        jTextField_M_Instr.setEditable(edit);
+        jTextField_W_Instr.setEditable(edit);
+    }
+
+    private void setButtonVisable(boolean vis) {
+        jButton_Play.setVisible(vis);
+        jButton_Stop.setVisible(!vis);
+        jButton_NextStep.setVisible(vis);
+        jButton_Reset.setVisible(vis);
+        jButton_Refresh.setVisible(vis);
+        jRadioButton_1HZ.setVisible(vis);
+        jRadioButton_5HZ.setVisible(vis);
+        jRadioButton_20HZ.setVisible(vis);
+    }
+
     /**
      * Creates new form ClientFrame
      */
@@ -32,52 +96,16 @@ public class ClientFrame extends javax.swing.JFrame {
         timer = new Timer();
         task = null;
         Option.setSelected(jRadioButton_1HZ.getModel(), true);
-        jTextField_F_PredPC.setEditable(false);
-        jTextField_D_Stat.setEditable(false);
-        jTextField_D_Ifun.setEditable(false);
-        jTextField_D_RA.setEditable(false);
-        jTextField_D_RB.setEditable(false);
-        jTextField_D_Icode.setEditable(false);
-        jTextField_D_ValP.setEditable(false);
-        jTextField_D_ValC.setEditable(false);
-        jTextField_E_Stat.setEditable(false);
-        jTextField_E_Ifun.setEditable(false);
-        jTextField_E_ValC.setEditable(false);
-        jTextField_E_ValA.setEditable(false);
-        jTextField_E_ValB.setEditable(false);
-        jTextField_E_Icode.setEditable(false);
-        jTextField_E_DstM.setEditable(false);
-        jTextField_E_SrcA.setEditable(false);
-        jTextField_E_SrcB.setEditable(false);
-        jTextField_E_DstE.setEditable(false);
-        jTextField_M_Stat.setEditable(false);
-        jTextField_M_ValA.setEditable(false);
-        jTextField_M_ValE.setEditable(false);
-        jTextField_M_CC.setEditable(false);
-        jTextField_M_Icode.setEditable(false);
-        jTextField_M_DstE.setEditable(false);
-        jTextField_M_DstM.setEditable(false);
-        jTextField_M_Cnd.setEditable(false);
-        jTextField_W_Stat.setEditable(false);
-        jTextField_W_Icode.setEditable(false);
-        jTextField_W_ValE.setEditable(false);
-        jTextField_W_ValM.setEditable(false);
-        jTextField_W_DstE.setEditable(false);
-        jTextField_W_DstM.setEditable(false);
-        jTextField_Cycle.setEditable(false);
-        jTextField_eax.setEditable(false);
-        jTextField_ecx.setEditable(false);
-        jTextField_edx.setEditable(false);
-        jTextField_ebx.setEditable(false);
-        jTextField_esp.setEditable(false);
-        jTextField_ebp.setEditable(false);
-        jTextField_esi.setEditable(false);
-        jTextField_edi.setEditable(false);
-        jTextField_D_Instr.setEditable(false);
-        jTextField_E_Instr.setEditable(false);
-        jTextField_M_Instr.setEditable(false);
-        jTextField_W_Instr.setEditable(false);
 
+        setEdit(false);
+        setButtonVisable(true);
+
+        DefaultTableCellRenderer hr = (DefaultTableCellRenderer) jTable_Code.getTableHeader().getDefaultRenderer();
+        hr.setHorizontalAlignment(JLabel.CENTER);
+        jTable_Code.getTableHeader().setFont(new Font("Lucida Grande", Font.BOLD, 14));
+        jTable_Code.getTableHeader().setDefaultRenderer(hr);
+        jTable_Memory.getTableHeader().setFont(new Font("Lucida Grande", Font.BOLD, 14));
+        jTable_Memory.getTableHeader().setDefaultRenderer(hr);
     }
 
     /**
@@ -260,7 +288,7 @@ public class ClientFrame extends javax.swing.JFrame {
 
         jTabbedPane_Navigation.addTab("File", jPanel_FIle);
 
-        jTable_Code.setFont(new java.awt.Font("微软雅黑", 0, 18)); // NOI18N
+        jTable_Code.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jTable_Code.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -268,8 +296,21 @@ public class ClientFrame extends javax.swing.JFrame {
             new String [] {
                 "Address", "Binary Code", "Instruction"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable_Code);
+        if (jTable_Code.getColumnModel().getColumnCount() > 0) {
+            jTable_Code.getColumnModel().getColumn(0).setResizable(false);
+            jTable_Code.getColumnModel().getColumn(1).setResizable(false);
+            jTable_Code.getColumnModel().getColumn(2).setResizable(false);
+        }
 
         javax.swing.GroupLayout jPanel_CodeLayout = new javax.swing.GroupLayout(jPanel_Code);
         jPanel_Code.setLayout(jPanel_CodeLayout);
@@ -326,7 +367,8 @@ public class ClientFrame extends javax.swing.JFrame {
         jLabel_Cycle.setText("Cycle");
 
         jTextField_Cycle.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jTextField_Cycle.setText("    0");
+        jTextField_Cycle.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField_Cycle.setText("0");
         jTextField_Cycle.setToolTipText("");
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -368,14 +410,14 @@ public class ClientFrame extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jButton_Refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton_Reset)
-                                            .addComponent(jButton_NextStep, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton_Stop, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jButton_Reset, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton_NextStep, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton_Stop, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton_Play, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField_Cycle)
+                                            .addComponent(jTextField_Cycle, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel_Cycle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -384,9 +426,6 @@ public class ClientFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_NextStep, jButton_Play, jButton_Refresh, jButton_Reset, jButton_Stop});
-
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -400,7 +439,7 @@ public class ClientFrame extends javax.swing.JFrame {
                         .addComponent(jTextField_Cycle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(73, 73, 73)
                         .addComponent(jButton_Play)
-                        .addGap(18, 18, 18)
+                        .addGap(0, 0, 0)
                         .addComponent(jButton_Stop)
                         .addGap(18, 18, 18)
                         .addComponent(jButton_NextStep)
@@ -1122,7 +1161,7 @@ public class ClientFrame extends javax.swing.JFrame {
 
         jTabbedPane_Navigation.addTab("Process", jPanel_Process);
 
-        jTable_Memory.setFont(new java.awt.Font("微软雅黑", 0, 18)); // NOI18N
+        jTable_Memory.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jTable_Memory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1130,8 +1169,20 @@ public class ClientFrame extends javax.swing.JFrame {
             new String [] {
                 "Address", "Data"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jTable_Memory);
+        if (jTable_Memory.getColumnModel().getColumnCount() > 0) {
+            jTable_Memory.getColumnModel().getColumn(0).setResizable(false);
+            jTable_Memory.getColumnModel().getColumn(1).setResizable(false);
+        }
 
         javax.swing.GroupLayout jPanel_MemoryLayout = new javax.swing.GroupLayout(jPanel_Memory);
         jPanel_Memory.setLayout(jPanel_MemoryLayout);
@@ -1304,54 +1355,41 @@ public class ClientFrame extends javax.swing.JFrame {
 
     }
 
-    void open() {
-        JFileChooser chooser = new JFileChooser();
-        int result = chooser.showOpenDialog(this);
-        if (result == JFileChooser.APPROVE_OPTION) {
-            File file = chooser.getSelectedFile();
-            int count = 0;
-            byte[] re;
-            try {
-                FileInputStream in = new FileInputStream(file);
-                re = new byte[MAX_CODELEN];
-                count = in.read(re);
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, "导入失败！\n" + e.getMessage(), "提示信息", JOptionPane.WARNING_MESSAGE);
-                return;
-            }
-            PipelineClient.Send(Request.getReqStr(Request.OPENFILE, ""));
-            PipelineClient.SendBytes(re, count);
-            String Code = PipelineClient.Receive();
-            Code = Code.substring(1, Code.length() - 1);
-            String[] rows = Code.split("#");
-            Object[][] codeDisplay = new Object[rows.length][2];
-            int i = 0, j = 0;
-            for (String x : rows) {
-                String temp = x.substring(1, x.length() - 1);
-                for (String y : temp.split(":")) {
-                    codeDisplay[i][j] = y;
-                    j++;
-                }
-                i++;
-                j = 0;
-            }
-            jTable_Code.setModel(new javax.swing.table.DefaultTableModel(
-                    codeDisplay,
-                    new String[]{
-                        "Binary Code", "Instruction"
-                    }
-            ));
+    private void getCode() {
+        PipelineClient.Send(Request.getReqStr(Request.CODE, ""));
+        String Code = PipelineClient.Receive();
+        Code = Code.substring(1, Code.length() - 1);
+        String[] rows = Code.split("#");
+        Object[][] codes = new Object[rows.length][3];
+        int i = 0, j = 1;
+        int add = 0;
+        for (String x : rows) {
+            String temp = x.substring(1, x.length() - 1);
+            String[] y = temp.split(":");
+            codes[i][1] = y[0];
+            codes[i][2] = y[1];
+            codes[i][0] = Hex2String((String) Integer.toHexString(add));
+            add += y[0].length() / 2;
+            i++;
         }
+        DefaultTableModel tableModel = (DefaultTableModel) jTable_Code.getModel();
+        tableModel.setDataVector(codes, new String[]{"Address", "Binary Code", "Instruction"});
     }
 
-    private void setButtonVisable(boolean vis) {
-        jButton_Play.setVisible(vis);
-        jButton_NextStep.setVisible(vis);
-        jButton_Reset.setVisible(vis);
-        jButton_Refresh.setVisible(vis);
-        jRadioButton_1HZ.setVisible(vis);
-        jRadioButton_5HZ.setVisible(vis);
-        jRadioButton_20HZ.setVisible(vis);
+    private void getMemory() {
+        PipelineClient.Send(Request.getReqStr(Request.MEMORY, ""));
+        memory = PipelineClient.ReceiveBytes(MEMORY_SIZE);
+        int rows = memory.length / 4;
+        Object[][] memoryDisplay = new Object[rows][2];
+        int add = 0, i = 0;
+        while (i < rows) {
+            memoryDisplay[i][1] = Convert.ByteArray2String(add, 4);
+            memoryDisplay[i][0] = Hex2String((String) Integer.toHexString(add));
+            add += 4;
+            i++;
+        }
+        DefaultTableModel tableModel = (DefaultTableModel) jTable_Memory.getModel();
+        tableModel.setDataVector(memoryDisplay, new String[]{"Address", "Data"});
     }
 
     private void jButton_PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PlayActionPerformed
@@ -1395,36 +1433,17 @@ public class ClientFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         PipelineClient.Send(Request.getReqStr(Request.REFRESH, ""));
         Display();
+        getCode();
+        getMemory();
     }//GEN-LAST:event_jButton_RefreshActionPerformed
 
     private void jTabbedPane_NavigationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane_NavigationMouseClicked
         // TODO add your handling code here:
-        
-        PipelineClient.Send(Request.getReqStr(Request.MEMORY, ""));
-        memory =PipelineClient.ReceiveBytes();
-        int rows=(memory.length/4)+1;
-        Object[][] memoryDisplay = new Object[rows][2];
-        int add = 0, i = 0;
-        String temp;
-        while (i<rows) {
-            temp = Convert.ByteArray2String(add, 4);
-            memoryDisplay[i][1] = temp;
-            memoryDisplay[i][0] = Hex2String((String)Integer.toHexString(add));
-            add += 4;
-            i++;
-        }
-        jTable_Memory.setModel(new javax.swing.table.DefaultTableModel(
-                memoryDisplay,
-                new String[]{
-                    "Address", "Data"
-                }
-        ));
-
+        getMemory();
     }//GEN-LAST:event_jTabbedPane_NavigationMouseClicked
 
     private void jButton_OpenFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_OpenFileActionPerformed
         // TODO add your handling code here:
-
         JFileChooser chooser = new JFileChooser();
         int result = chooser.showOpenDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
@@ -1439,29 +1458,9 @@ public class ClientFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "导入失败！\n" + e.getMessage(), "提示信息", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            PipelineClient.Send(Request.getReqStr(Request.OPENFILE, ""));
+            PipelineClient.Send(Request.getReqStr(Request.OPENFILE, Integer.toString(count)));
             PipelineClient.SendBytes(re, count);
-            String Code = PipelineClient.Receive();
-            Code = Code.substring(1, Code.length() - 1);
-            String[] rows = Code.split("#");
-            Object[][] codeDisplay = new Object[rows.length][3];
-            int i = 0, j = 1;
-            int add=0;
-            for (String x : rows) {
-                String temp = x.substring(1, x.length() - 1);
-                String[] y=temp.split(":");
-                codeDisplay[i][1]=y[0];
-                codeDisplay[i][2]=y[1];
-                codeDisplay[i][0]=Hex2String((String)Integer.toHexString(add));
-                add+=y[0].length()/2;
-                i++;
-            }
-            jTable_Code.setModel(new javax.swing.table.DefaultTableModel(
-                    codeDisplay,
-                    new String[]{
-                        "Address","Binary Code", "Instruction"
-                    }
-            ));
+            getCode();
         }
     }//GEN-LAST:event_jButton_OpenFileActionPerformed
 

@@ -133,8 +133,7 @@ public class Pipeline {
                 Reset(true);
                 break;
             case Request.OPENFILE:
-                OpenFile(PipelineServer.ReadBytes());
-                Code();
+                OpenFile(PipelineServer.ReceiveBytes(req.argv));
                 break;
             case Request.PLAY:
                 Play(req.argv);
@@ -148,6 +147,9 @@ public class Pipeline {
             case Request.REFRESH:
                 Refresh();
                 break;
+            case Request.CODE:
+                Code();
+                break;
             case Request.MEMORY:
                 Memory();
                 break;
@@ -157,9 +159,8 @@ public class Pipeline {
 
 class Request {
 
-    public final static char AOK = '0';
-    public final static char RESET = 'R', OPENFILE = 'I', PLAY = 'P';
-    public final static char NEXT = 'N', STOP = 'S', REFRESH = 'F', MEMORY = 'M';
+    public final static char OPENFILE = 'I', PLAY = 'P', NEXT = 'N', STOP = 'S';
+    public final static char RESET = 'R', REFRESH = 'F', CODE = 'C', MEMORY = 'M';
     char cmd;
     int argv;
 

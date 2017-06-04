@@ -10,10 +10,11 @@ package pipelineclient;
  * @author lsh
  */
 public class Request {
-    public final static char RESET = 'R', OPENFILE = 'I', PLAY = 'P', NEXT = 'N', STOP = 'S';
-    public final static char REFRESH = 'F', OPTION = 'O', CODE = 'C', MEMORY = 'M';
-    
-    public static String getReqStr(char cmd,String argv) {
-        return cmd+argv;
+
+    public final static char OPENFILE = 'I', PLAY = 'P', NEXT = 'N', STOP = 'S';
+    public final static char RESET = 'R', REFRESH = 'F', CODE = 'C', MEMORY = 'M';
+
+    public static String getReqStr(char cmd, String argv) {
+        return cmd + argv;
     }
 }

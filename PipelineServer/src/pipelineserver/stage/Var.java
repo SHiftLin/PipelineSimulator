@@ -38,6 +38,7 @@ public class Var {
     public static String f_code, D_code, d_code, E_code, e_code, M_code, m_code, W_code;
 
     public static final int MEMORY_SIZE = 65536;
+    public static final int MAX_CODELEN = 65536;
     public static byte[] memory = new byte[MEMORY_SIZE];
     public static int[] register = new int[8];
 
