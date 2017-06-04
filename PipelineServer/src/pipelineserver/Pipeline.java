@@ -98,7 +98,7 @@ public class Pipeline {
                 task.cancel();
             }
             Runnable = false;
-            PipelineServer.WriteInfo(JsonUtil.HALT());
+            //PipelineServer.WriteInfo(JsonUtil.HALT());
         }
     }
 

@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 import static pipelineserver.stage.Var.*;
-
+import static pipelineserver.utility.Convert.*;
 /**
  *
  * @author lsh
@@ -27,14 +27,14 @@ public class JsonUtil {
         
         json.put("status","OK");
         json.put("Cycle",Cycle);
-        json.put("%eax",register[0]);
-        json.put("%ecx",register[1]);
-        json.put("%edx",register[2]);
-        json.put("%ebx",register[3]);
-        json.put("%esp",register[4]);
-        json.put("%ebp",register[5]);
-        json.put("%esi",register[6]);
-        json.put("%edi",register[7]);
+        json.put("%eax",Hex2String((String) Integer.toHexString(register[0])));
+        json.put("%ecx",Hex2String((String) Integer.toHexString(register[1])));
+        json.put("%edx",Hex2String((String) Integer.toHexString(register[2])));
+        json.put("%ebx",Hex2String((String) Integer.toHexString(register[3])));
+        json.put("%esp",Hex2String((String) Integer.toHexString(register[4])));
+        json.put("%ebp",Hex2String((String) Integer.toHexString(register[5])));
+        json.put("%esi",Hex2String((String) Integer.toHexString(register[6])));
+        json.put("%edi",Hex2String((String) Integer.toHexString(register[7])));
         
         json.put("F_predPC", F_predPC);
 
