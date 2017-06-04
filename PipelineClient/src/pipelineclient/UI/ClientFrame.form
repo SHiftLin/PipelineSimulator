@@ -68,7 +68,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
                       <Component id="jButton_OpenFile" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace pref="328" max="32767" attributes="0"/>
+                      <EmptySpace pref="309" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -110,7 +110,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="684" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="657" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -177,9 +177,8 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel1" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel1" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="jSeparator10" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
@@ -212,7 +211,7 @@
                               <Component id="jPanel4" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace pref="38" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -229,7 +228,7 @@
                               <Component id="jSeparator8" min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -284,24 +283,20 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
+                                              <Component id="jLabel_Cycle" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="jButton_Refresh" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                                                       <Component id="jButton_Reset" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                                                       <Component id="jButton_NextStep" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                                                       <Component id="jButton_Stop" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                                                       <Component id="jButton_Play" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                                                      <Component id="jTextField_Cycle" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="24" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jTextField_Cycle" min="-2" pref="86" max="-2" attributes="0"/>
-                                                      <Component id="jLabel_Cycle" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jSeparator9" min="-2" pref="5" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jRadioButton_20HZ" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -471,18 +466,18 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel_Writeback" alignment="1" pref="70" max="32767" attributes="0"/>
-                              <Component id="jLabel_Memory" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jLabel_Excute" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jLabel_Decode" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jLabel_Fetch" alignment="1" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSeparator2" pref="737" max="32767" attributes="0"/>
+                              <Component id="jLabel_Writeback" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="jLabel_Memory" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel_Excute" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel_Decode" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel_Fetch" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                          <Component id="jSeparator1" min="-2" pref="8" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jSeparator2" pref="724" max="32767" attributes="0"/>
                               <Component id="jSeparator3" max="32767" attributes="0"/>
                               <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
                               <Component id="jSeparator5" alignment="0" max="32767" attributes="0"/>
@@ -629,127 +624,126 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="jLabel_Fetch" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                                  <Component id="jLabel_Decode" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Component id="jLabel_Excute" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                                  <Component id="jLabel_Memory" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                                  <Component id="jLabel_Writeback" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jSeparator1" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_F_PredPC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_F_PredPC" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="jSeparator2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_D_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_D_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_D_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_D_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_D_RA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_D_RA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_D_RB" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_D_RB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_D_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_D_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_D_ValP" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_D_ValP" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_D_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_D_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jSeparator3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_E_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_E_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_E_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_E_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_E_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_E_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_E_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_E_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_E_ValB" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_E_ValB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel_E_Icode" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField_E_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel_E_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField_E_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel_E_SrcA" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField_E_SrcA" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel_E_SrcB" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField_E_SrcB" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel_E_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField_E_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                                  <Component id="jLabel_Decode" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                  <Component id="jLabel_Excute" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                                  <Component id="jLabel_Memory" min="-2" pref="50" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="jLabel_Writeback" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jSeparator4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_M_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_M_CC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_CC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_M_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_M_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_M_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_M_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_M_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_M_Cnd" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_M_Cnd" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_W_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_W_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_W_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_W_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_W_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_W_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_W_ValM" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_W_ValM" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_W_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_W_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_W_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField_W_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_F_PredPC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_F_PredPC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_Fetch" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <Component id="jSeparator2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_D_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_D_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_D_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_D_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_D_RA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_D_RA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_D_RB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_D_RB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_D_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_D_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_D_ValP" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_D_ValP" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_D_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_D_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jSeparator3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_E_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_E_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_E_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_E_Ifun" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_E_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_E_ValC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_E_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_E_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_E_ValB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_E_ValB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel_E_Icode" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jTextField_E_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel_E_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField_E_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel_E_SrcA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField_E_SrcA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel_E_SrcB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField_E_SrcB" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel_E_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField_E_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jSeparator4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_M_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_M_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_CC" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_M_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_M_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_ValA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_M_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_M_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_M_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_M_Cnd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_M_Cnd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_W_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_W_Stat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_W_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_W_Icode" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_W_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_W_ValE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel_W_ValM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_W_ValM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_W_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_W_DstE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_W_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField_W_DstM" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1720,7 +1714,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" pref="684" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" pref="657" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
