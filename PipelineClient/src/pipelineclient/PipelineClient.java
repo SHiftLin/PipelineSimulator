@@ -31,12 +31,12 @@ public class PipelineClient {
         // TODO code application logic here
         try {
             client = new Socket(serverAddress, port);
-            client.setSoTimeout(0);
+            client.setSoTimeout(300);
             out = new DataOutputStream(client.getOutputStream());
             in = new DataInputStream(client.getInputStream());
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Cannot connect to the server!", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
+            System.exit(0);
         }
         CF = new ClientFrame();
         CF.setLocationRelativeTo(null);

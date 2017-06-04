@@ -18,12 +18,12 @@
 *.tar.gz
 *.rar
 
-*nbproject/private/*
-*build/
-*nbbuild/
-*dist/
-*nbdist/
-*.nb-gradle/
+*/nbproject/private/
+*/build/
+*/nbbuild/
+*/dist/
+*/nbdist/
+*/.nb-gradle/
 
 *.DS_Store
 .AppleDouble
