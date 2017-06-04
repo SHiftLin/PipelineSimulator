@@ -42,8 +42,8 @@ public class JsonUtil {
         json.put("D_stat",D_stat);
         json.put("D_icode",D_icode.ordinal());
         json.put("D_ifun", D_ifun);
-        json.put("D_rA", D_rA);
-        json.put("D_rB", D_rB);
+        json.put("D_rA", Integer.toHexString(D_rA));
+        json.put("D_rB", Integer.toHexString(D_rB));
         json.put("D_valC", D_valC);
         json.put("D_valP", D_valP);
 
@@ -54,10 +54,10 @@ public class JsonUtil {
         json.put("E_valC", E_valC);
         json.put("E_valA", E_valA);
         json.put("E_valB", E_valB);
-        json.put("E_dstE", E_dstE);
-        json.put("E_dstM", E_dstM);
-        json.put("E_srcA", E_srcA);
-        json.put("E_srcB", E_srcB);
+        json.put("E_dstE", Integer.toHexString(E_dstE));
+        json.put("E_dstM", Integer.toHexString(E_dstM));
+        json.put("E_srcA", Integer.toHexString(E_srcA));
+        json.put("E_srcB", Integer.toHexString(E_srcB));
 
         json.put("M_code", M_code);
         json.put("M_stat",M_stat);
@@ -68,16 +68,16 @@ public class JsonUtil {
         json.put("of", of);
         json.put("M_valE", M_valE);
         json.put("M_valA", M_valA);
-        json.put("M_dstE", M_dstE);
-        json.put("M_dstM", M_dstM);
+        json.put("M_dstE", Integer.toHexString(M_dstE));
+        json.put("M_dstM", Integer.toHexString(M_dstM));
 
         json.put("W_code", W_code);
         json.put("W_stat",W_stat);
         json.put("W_icode",W_icode.ordinal());
         json.put("W_valE", W_valE);
         json.put("W_valM", W_valM);
-        json.put("W_dstE", W_dstE);
-        json.put("W_dstM", W_dstM);
+        json.put("W_dstE", Integer.toHexString(W_dstE));
+        json.put("W_dstM", Integer.toHexString(W_dstM));
 
         return jsonMapToString(json);
     }
