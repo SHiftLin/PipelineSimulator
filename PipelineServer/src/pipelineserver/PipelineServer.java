@@ -27,12 +27,13 @@ public class PipelineServer {
     public static void main(String[] args) {
         // TODO code application logic here
         try {
-            serverSocket = new ServerSocket(10000);
+            serverSocket = new ServerSocket(8888);
         } catch (Exception e) {
             System.out.println("Port allocation failed!");
             System.exit(0);
         }
         while (true) {
+            System.out.println("Listening...");
             try {
                 server = Accept();
                 System.out.println("New connection!");
@@ -88,7 +89,6 @@ public class PipelineServer {
         }
         try {
             outStream.writeUTF(result);
-            System.out.println(result);
         } catch (Exception e) {
         }
     }

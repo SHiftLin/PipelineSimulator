@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 public class PipelineClient {
 
     private static String serverAddress;
-    private static int port = 10000;
+    private static int port = 8888;
     private static Socket client;
     static DataOutputStream out;
     static DataInputStream in;

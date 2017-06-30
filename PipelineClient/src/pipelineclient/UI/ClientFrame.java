@@ -1229,7 +1229,6 @@ public class ClientFrame extends javax.swing.JFrame {
 
     public void Display(DataInputStream in) {
         String str = PipelineClient.Receive(in);
-        System.out.println(str);
         if (str.length() <= 0) {
             return;
         }
